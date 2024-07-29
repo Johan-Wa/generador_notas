@@ -1,7 +1,10 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QGraphicsDropShadowEffect, QFileDialog
-from PyQt5.QtCore import QPropertyAnimation, QEasingCurve
-from PyQt5.QtGui import QColor
+from pathlib import Path
+
+from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QWidget
 from PyQt5.uic import loadUi
+
+from gui.create_notebook import Ui_create_book
+
 
 class MainApp(QMainWindow):
     def __init__(self):
@@ -17,6 +20,8 @@ class MainApp(QMainWindow):
         self.bt_template.clicked.connect(lambda : self.search_file(self.template_line))
         self.bt_close.clicked.connect(lambda : self.close())
 
+        self.bt_create.clicked.connect(self.create_window)
+
 
     def search_dir(self, line):
         dir_name = QFileDialog.getExistingDirectory(self, 'Select dir')
@@ -26,11 +31,19 @@ class MainApp(QMainWindow):
         file_path = QFileDialog.getOpenFileName(self, 'Select File')
         file_name = file_path[0].split('/')[-1].split('.')[0] # Extraemos solo el nombre del archivo en la ruta.
         line.setText(file_name)
-        
 
+    def create_window(self):
+        self.c_window = QMainWindow()
+        self.ui =  Ui_create_book()
+        self.ui.setupUi(self.c_window)
+        self.c_window.setFixedSize(800,300)
+        self.c_window.show()
+
+    
 
 if __name__ == '__main__':
 	app = QApplication([])
 	window = MainApp()
+	# c_window = CreateNotebook()
 	window.show() #con hide() ocultamos
 	app.exec_()
