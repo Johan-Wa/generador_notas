@@ -322,12 +322,12 @@ background-color: rgb(0,0,0)
                 <string notr="true">color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
-                <string>Plantilla</string>
+                <string>Nombre de sesion</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="template_line">
+              <widget class="QLineEdit" name="session_line">
                <property name="font">
                 <font>
                  <family>IosevkaTerm Nerd Font</family>
@@ -486,7 +486,7 @@ QPushButton:hover{
                 <string notr="true">color: rgb(255, 255, 255);</string>
                </property>
                <property name="text">
-                <string>Carpeta de plantillas</string>
+                <string>Plantilla</string>
                </property>
               </widget>
              </item>
@@ -596,43 +596,6 @@ QPushButton:hover{
             </property>
             <property name="text">
              <string>Selecionar cuaderno</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="bt_template">
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>350</width>
-              <height>40</height>
-             </size>
-            </property>
-            <property name="sizeIncrement">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <family>IosevkaTerm Nerd Font</family>
-              <pointsize>15</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="text">
-             <string>Selecionar Plantilla</string>
             </property>
            </widget>
           </item>
